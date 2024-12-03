@@ -5,9 +5,16 @@
         <meta charset="UTF-8" />
         <title>Party!</title>
         <script type="text/javascript" src = {% static '/party/js/htmx.min.js' %}></script>
+        <link href="{% static '/party/css/tailwind_output.css' %}" rel="stylesheet">
     </head>
-    <body>
-        <main>
+    <body class="bg-custom-powder-light"">
+        <nav class="bg-custom-powder-light">
+            <a 
+                href="/"
+                class="inline-block p-4 text-custom-powder-light font-dancing-script text-2xl"
+            >My partiest</a>
+        </nav>
+        <main class="container p-5 m-auto">
             {% block content %}
             {% endblock %}
         </main>
